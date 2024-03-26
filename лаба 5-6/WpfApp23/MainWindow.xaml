@@ -1,0 +1,379 @@
+﻿<Window x:Class="WpfApp23.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp23"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1000" MinHeight="450" MinWidth="1000">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11*"/>
+            <RowDefinition Height="206*"/>
+
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Vertical" Background="Black">
+
+            <Menu Height="19" Background="Black" Width="854" HorizontalAlignment="Left" >
+                <Image Source="картинки\photo_2024-03-10_20-28-25.jpg" HorizontalAlignment="Left" Width="25" Height="16"/>
+
+                <MenuItem Header="Файл" FontSize="13"  Width="38"  Foreground="White"  >
+                    <MenuItem Header="Создать"/>
+                    <MenuItem Header="Открыть"/>
+                    <MenuItem Header="Клонировать репозиторий..."/>
+                    <MenuItem Header="Начальное окно"/>
+                    <MenuItem Header="Добавить"/>
+                    <MenuItem Header="Закрыть"/>
+                    <MenuItem Header="Закрыть решение"/>
+                    <MenuItem Header="Запустить сеанс Live Share"/>
+                    <MenuItem Header="Присоединится к сеансу Live Share..."/>
+                    <MenuItem Header="Сохранить MainWindow.xaml"/>
+                    <MenuItem Header="Cохранить MainWindow.xaml как..."/>
+                    <MenuItem Header="Сохранить все"/>
+                    <MenuItem Header="Параметры страницы"/>
+                    <MenuItem Header="Печать..."/>
+                    <MenuItem Header="Параметры учетной записи..."/>
+                    <MenuItem Header="Последние файлы"/>
+                    <MenuItem Header="Последние проекты и решения"/>
+                    <MenuItem Header="Выход"/>
+                </MenuItem>
+
+
+                <MenuItem Header="Правка" FontSize="13" Foreground="White">
+                    <MenuItem Header="Перейти"/>
+                    <MenuItem Header="Найти и заменить"/>
+                    <MenuItem Header="Отменить"/>
+                    <MenuItem Header="Вернуть"/>
+                    <MenuItem Header="Отменить последнее глобальное действие"/>
+                    <MenuItem Header="Повторить последнее глобальное действие"/>
+                    <MenuItem Header="Вырезать"/>
+                    <MenuItem Header="Копировать"/>
+                    <MenuItem Header="Вставить"/>
+                    <MenuItem Header="Показать журнул буфера обмена"/>
+                    <MenuItem Header="Дублировать"/>
+                    <MenuItem Header="Удалить"/>
+                    <MenuItem Header="Выделить все"/>
+                    <MenuItem Header="Вставить файл как текст..."/>
+                    <MenuItem Header="Дополнительно"/>
+                    <MenuItem Header="Закладки"/>
+                    <MenuItem Header="Структура"/>
+                    <MenuItem Header="IntelliSense"/>
+                    <MenuItem Header="Несколько курсоров"/>
+                    <MenuItem Header="Выполнить рефакторинг"/>
+                    <MenuItem Header="Предложения IntelliCode"/>
+                </MenuItem>
+                <MenuItem Header="Вид" FontSize="13" Foreground="White">
+                    <MenuItem Header="Код"/>
+                    <MenuItem Header="Конструктор"/>
+                    <MenuItem Header="Открыть"/>
+                    <MenuItem Header="Открыть с помощью..."/>
+                    <MenuItem Header="Проектировать в Blend..."/>
+                    <MenuItem Header="Обозреватель решений"/>
+                    <MenuItem Header="Изменения Git"/>
+                    <MenuItem Header="Репозитроий Git"/>
+                    <MenuItem Header="Team Explorer"/>
+                    <MenuItem Header="Обозреватель серверов"/>
+                    <MenuItem Header="Обозреватель Data Lake Analytics"/>
+                    <MenuItem Header="Обореватель объектов SQL Server"/>
+                    <MenuItem Header="Обозреватель тестов"/>
+                    <MenuItem Header="Окно закладок"/>
+                    <MenuItem Header="Иерархия вызовов"/>
+                    <MenuItem Header="Классы"/>
+                    <MenuItem Header="Окно определения кода"/>
+                    <MenuItem Header="Обозреватель объектов"/>
+                    <MenuItem Header="Список ошибок"/>
+                    <MenuItem Header="Вывод"/>
+                    <MenuItem Header="Список задач"/>
+                    <MenuItem Header="Панель элементов"/>
+                    <MenuItem Header="Уведомления"/>
+                    <MenuItem Header="Терминал"/>
+                    <MenuItem Header="Другие окна"/>
+                    <MenuItem Header="Панели инструментов"/>
+                    <MenuItem Header="Во весь экран"/>
+                    <MenuItem Header="Все окна"/>
+                    <MenuItem Header="Назад"/>
+                    <MenuItem Header="Вперед"/>
+                    <MenuItem Header="Следующая задача"/>
+                    <MenuItem Header="Предыдущая задача"/>
+                    <MenuItem Header="Окно свойств"/>
+                    <MenuItem Header="Страницы свойства"/>
+                </MenuItem>
+                <MenuItem Header="Git" FontSize="13" Foreground="White">
+                    <MenuItem Header="Клонировать репозиторий..."/>
+                    <MenuItem Header="Создать репозиторий Git..."/>
+                    <MenuItem Header="Локальные репозитории..."/>
+                    <MenuItem Header="Фиксация или скрытие..."/>
+                    <MenuItem Header="Извлечь"/>
+                    <MenuItem Header="Получить"/>
+                    <MenuItem Header="Отправить"/>
+                    <MenuItem Header="Синхронизировать (получить, а затем отправить)"/>
+                    <MenuItem Header="Создать ветвь..."/>
+                    <MenuItem Header="Просмотреть журнал ветвей"/>
+                    <MenuItem Header="Управление ветвями"/>
+                    <MenuItem Header="Открыть в проводнике"/>
+                    <MenuItem Header="Открыть в командной строке"/>
+                    <MenuItem Header="Управление удаленными элементами..."/>
+                    <MenuItem Header="Параметры"/>
+                </MenuItem>
+
+                <MenuItem Header="Проект" FontSize="13" Foreground="White">
+                <MenuItem Header="Добавить окно (WPF)..."/>
+                <MenuItem Header="Добавить страницу (WPF)..."/>
+                <MenuItem Header="Добавить пользовательский элемент управления (WPF)..."/>
+                <MenuItem Header="Добавить словарь ресурсов (WPF)..."/>
+                <MenuItem Header="Добавить класс..."/>
+                <MenuItem Header="Добавить новый источник данных..."/>
+                <MenuItem Header="Добавить новый элемент..."/>
+                <MenuItem Header="Добавить существующий элемент..."/>
+                <MenuItem Header="Исключить из проекта"/>
+                <MenuItem Header="Показать все файлы"/>
+                <MenuItem Header="Запустить пользовательский инструмент"/>
+                <MenuItem Header="Добавить ссылку..."/>
+                <MenuItem Header="Добавить ссылку на службу…"/>
+                <MenuItem Header="Подключенные службы"/>
+                <MenuItem Header="Добавить анализатор…"/>
+                <MenuItem Header="Настройка начальных проектов…"/>
+                <MenuItem Header="Назначить в качестве запускаемого проекта"/>
+                <MenuItem Header="Экспорт шаблона…"/>
+                <MenuItem Header="Управление пакетами NuGet…"/>
+                <MenuItem Header="Обновить панель элементов проекта"/>
+                <MenuItem Header="Свойства: WpfApp23"/>
+                 </MenuItem>
+                <MenuItem Header="Сборка" FontSize="13" Foreground="White" >
+
+                    <MenuItem Header="Добавить окно (WPF)..."/>
+                    <MenuItem Header="Добавить страницу (WPF)..."/>
+                    <MenuItem Header="Добавить пользовательский элемент управления (WPF)..."/>
+                    <MenuItem Header="Добавить словарь ресурсов (WPF)..."/>
+                    <MenuItem Header="Добавить класс..."/>
+                    <MenuItem Header="Добавить новый источник данных..."/>
+                    <MenuItem Header="Добавить новый элемент..."/>
+                    <MenuItem Header="Добавить существующий элемент..."/>
+                    <MenuItem Header="Исключить из проекта"/>
+                    <MenuItem Header="Показать все файлы"/>
+                    <MenuItem Header="Запустить пользовательский инструмент"/>
+                    <MenuItem Header="Добавить ссылку..."/>
+                    <MenuItem Header="Добавить ссылку на службу…"/>
+                    <MenuItem Header="Подключенные службы"/>
+                    <MenuItem Header="Добавить анализатор…"/>
+                    <MenuItem Header="Настройка начальных проектов…"/>
+                    <MenuItem Header="Назначить в качестве запускаемого проекта"/>
+                    <MenuItem Header="Экспорт шаблона…"/>
+                    <MenuItem Header="Управление пакетами NuGet…"/>
+                    <MenuItem Header="Обновить панель элементов проекта"/>
+                    <MenuItem Header="Свойства: WpfApp23"/>
+
+
+
+                </MenuItem>
+                    <MenuItem Header="Отладка" FontSize="13" Foreground="White"/>
+                <MenuItem Header="Тест" FontSize="13 " Foreground="White">
+                    <MenuItem Header="Добавить окно (WPF)..."/>
+                    <MenuItem Header="Добавить страницу (WPF)..."/>
+                    <MenuItem Header="Добавить пользовательский элемент управления (WPF)..."/>
+                    <MenuItem Header="Добавить словарь ресурсов (WPF)..."/>
+                    <MenuItem Header="Добавить класс..."/>
+                    <MenuItem Header="Добавить новый источник данных..."/>
+                    <MenuItem Header="Добавить новый элемент..."/>
+                    <MenuItem Header="Добавить существующий элемент..."/>
+                    <MenuItem Header="Исключить из проекта"/>
+                    <MenuItem Header="Показать все файлы"/>
+                    <MenuItem Header="Запустить пользовательский инструмент"/>
+                    <MenuItem Header="Добавить ссылку..."/>
+                    <MenuItem Header="Добавить ссылку на службу…"/>
+                    <MenuItem Header="Подключенные службы"/>
+                    <MenuItem Header="Добавить анализатор…"/>
+                    <MenuItem Header="Настройка начальных проектов…"/>
+                    <MenuItem Header="Назначить в качестве запускаемого проекта"/>
+                    <MenuItem Header="Экспорт шаблона…"/>
+                    <MenuItem Header="Управление пакетами NuGet…"/>
+                    <MenuItem Header="Обновить панель элементов проекта"/>
+                    <MenuItem Header="Свойства: WpfApp23"/>
+                </MenuItem>
+                <MenuItem Header="Анализ" FontSize="13" Foreground="White">
+                    <MenuItem Header="Проектировать в Blend..."/>
+                    <MenuItem Header="Обозреватель решений"/>
+                    <MenuItem Header="Изменения Git"/>
+                    <MenuItem Header="Репозитроий Git"/>
+                    <MenuItem Header="Team Explorer"/>
+                    <MenuItem Header="Обозреватель серверов"/>
+                    <MenuItem Header="Обозреватель Data Lake Analytics"/>
+                    <MenuItem Header="Обореватель объектов SQL Server"/>
+                    <MenuItem Header="Обозреватель тестов"/>
+                    <MenuItem Header="Окно закладок"/>
+                    <MenuItem Header="Иерархия вызовов"/>
+                    <MenuItem Header="Классы"/>
+                    <MenuItem Header="Окно определения кода"/>
+                    <MenuItem Header="Обозреватель объектов"/>
+                    <MenuItem Header="Список ошибок"/>
+                    <MenuItem Header="Вывод"/>
+                    <MenuItem Header="Список задач"/>
+                    <MenuItem Header="Панель элементов"/>
+                    <MenuItem Header="Уведомления"/>
+                    <MenuItem Header="Терминал"/>
+                    <MenuItem Header="Другие окна"/>
+                    <MenuItem Header="Панели инструментов"/>
+                    <MenuItem Header="Во весь экран"/>
+                    <MenuItem Header="Все окна"/>
+                </MenuItem>
+                <MenuItem Header="Средства" FontSize="13" Foreground="White">
+                    
+                    <MenuItem Header="Начальное окно"/>
+                    <MenuItem Header="Добавить"/>
+                    <MenuItem Header="Закрыть"/>
+                    <MenuItem Header="Закрыть решение"/>
+                    <MenuItem Header="Запустить сеанс Live Share"/>
+                    <MenuItem Header="Присоединится к сеансу Live Share..."/>
+                    <MenuItem Header="Сохранить MainWindow.xaml"/>
+                    <MenuItem Header="Cохранить MainWindow.xaml как..."/>
+                    <MenuItem Header="Сохранить все"/>
+                    <MenuItem Header="Параметры страницы"/>
+                    <MenuItem Header="Печать..."/>
+                    <MenuItem Header="Параметры учетной записи..."/>
+                    <MenuItem Header="Обозреватель тестов"/>
+                    <MenuItem Header="Окно закладок"/>
+                    <MenuItem Header="Иерархия вызовов"/>
+                    <MenuItem Header="Классы"/>
+                    <MenuItem Header="Окно определения кода"/>
+                    <MenuItem Header="Обозреватель объектов"/>
+                    <MenuItem Header="Список ошибок"/>
+                    <MenuItem Header="Вывод"/>
+                </MenuItem>
+                <MenuItem Header="Расширения" FontSize="13" Foreground="White">
+                    <MenuItem Header="Открыть"/>
+                    <MenuItem Header="Открыть с помощью..."/>
+                    <MenuItem Header="Проектировать в Blend..."/>
+                    <MenuItem Header="Обозреватель решений"/>
+                    <MenuItem Header="Изменения Git"/>
+                    <MenuItem Header="Репозитроий Git"/>
+                    <MenuItem Header="Team Explorer"/>
+                    <MenuItem Header="Обозреватель серверов"/>
+                    <MenuItem Header="Обозреватель Data Lake Analytics"/>
+                    <MenuItem Header="Обореватель объектов SQL Server"/>
+                    <MenuItem Header="Обозреватель тестов"/>
+                    <MenuItem Header="Окно закладок"/>
+                    <MenuItem Header="Иерархия вызовов"/>
+                    <MenuItem Header="Классы"/>
+                    <MenuItem Header="Окно определения кода"/>
+                    <MenuItem Header="Обозреватель объектов"/>
+                    <MenuItem Header="Список ошибок"/>
+                    <MenuItem Header="Вывод"/>
+                    <MenuItem Header="Список задач"/>
+                    <MenuItem Header="Панель элементов"/>
+                    <MenuItem Header="Уведомления"/>
+                    <MenuItem Header="Терминал"/>
+                    <MenuItem Header="Другие окна"/>
+                    <MenuItem Header="Панели инструментов"/>
+                    <MenuItem Header="Во весь экран"/>
+                    <MenuItem Header="Все окна"/>
+                </MenuItem>
+                <MenuItem Header="Окно" FontSize="13" Foreground="White">
+                    <MenuItem Header="Обозреватель Data Lake Analytics"/>
+                    <MenuItem Header="Обореватель объектов SQL Server"/>
+                    <MenuItem Header="Обозреватель тестов"/>
+                    <MenuItem Header="Окно закладок"/>
+                    <MenuItem Header="Иерархия вызовов"/>
+                    <MenuItem Header="Классы"/>
+                    <MenuItem Header="Окно определения кода"/>
+                    <MenuItem Header="Обозреватель объектов"/>
+                    <MenuItem Header="Открыть"/>
+                    <MenuItem Header="Открыть с помощью..."/>
+                    <MenuItem Header="Проектировать в Blend..."/>
+                    <MenuItem Header="Обозреватель решений"/>
+                    <MenuItem Header="Изменения Git"/>
+                    <MenuItem Header="Репозитроий Git"/>
+                    <MenuItem Header="Team Explorer"/>
+                    <MenuItem Header="Обозреватель серверов"/>
+                    <MenuItem Header="Обозреватель Data Lake Analytics"/>
+                    <MenuItem Header="Обореватель объектов SQL Server"/>
+                    <MenuItem Header="Обозреватель тестов"/>
+                    <MenuItem Header="Окно закладок"/>
+                    <MenuItem Header="Иерархия вызовов"/>
+                    <MenuItem Header="Классы"/>
+                    <MenuItem Header="Окно определения кода"/>
+                    <MenuItem Header="Обозреватель объектов"/>
+                    <MenuItem Header="Список ошибок"/>
+                    <MenuItem Header="Вывод"/>
+                    <MenuItem Header="Список задач"/>
+                    <MenuItem Header="Панель элементов"/>
+                    <MenuItem Header="Уведомления"/>
+                    <MenuItem Header="Терминал"/>
+                    <MenuItem Header="Другие окна"/>
+                    <MenuItem Header="Панели инструментов"/>
+                    <MenuItem Header="Во весь экран"/>
+                    <MenuItem Header="Все окна"/>
+                </MenuItem>
+                <MenuItem Header="Справка" FontSize="13" Foreground="White">
+                    <MenuItem Header="Обозреватель тестов"/>
+                    <MenuItem Header="Окно закладок"/>
+                    <MenuItem Header="Иерархия вызовов"/>
+                    <MenuItem Header="Классы"/>
+                    <MenuItem Header="Окно определения кода"/>
+                    <MenuItem Header="Обозреватель объектов"/>
+                    <MenuItem Header="Открыть"/>
+                    <MenuItem Header="Открыть с помощью..."/>
+                    <MenuItem Header="Проектировать в Blend..."/>
+                    <MenuItem Header="Обозреватель решений"/>
+                    <MenuItem Header="Изменения Git"/>
+                    <MenuItem Header="Репозитроий Git"/>
+                    <MenuItem Header="Team Explorer"/>
+                    <MenuItem Header="Обозреватель серверов"/>
+                    <MenuItem Header="Обозреватель Data Lake Analytics"/>
+                    <MenuItem Header="Обореватель объектов SQL Server"/>
+                    <MenuItem Header="Обозреватель тестов"/>
+                    <MenuItem Header="Окно закладок"/>
+                    <MenuItem Header="Иерархия вызовов"/>
+                    <MenuItem Header="Классы"/>
+                    <MenuItem Header="Окно определения кода"/>
+                    <MenuItem Header="Обозреватель объектов"/>
+                    <MenuItem Header="Список ошибок"/>
+                    <MenuItem Header="Вывод"/>
+                    <MenuItem Header="Список задач"/>
+                </MenuItem>
+                <Image Source="картинки\photo_2024-03-10_20-28-02.jpg" Height="auto" Width="auto"/>
+            </Menu>
+        </StackPanel>
+        <Canvas HorizontalAlignment="Left" VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal" VerticalAlignment="Top"  Height="18" Margin="0,22,0,0" Grid.RowSpan="2">
+                <Menu Background="Black" Width="964" >
+                    <Image Height="20" Width="19" Source="картинки\3.jpg"/>
+                    
+                    <Image Height="20" Width="19" HorizontalAlignment="Left" Source="картинки\2.jpg"/>
+                    <Image Height="18" Width="15" Source="\картинки\photo_2024-03-10_20-29-41.jpg"/>
+                    <Image Height="20" Width="31" Source="картинки\1.jpg"/>
+                    <Image Height="15" Width="30" Source="картинки\photo_2024-03-10_20-28-45.jpg"/>
+                    <Image Height="20" Width="24" Source="картинки\photo_2024-03-10_20-29-52.jpg"/>
+                    <Image Height="19" Width="12"  Source="картинки\photo_2024-03-10_20-29-59.jpg"/>
+                    <Image Height="18" Width="14" Source="картинки\photo_2024-03-10_20-30-08.jpg"/>
+                    <Image Height="18" Width="16" Source="картинки\photo_2024-03-10_20-30-15.jpg"/>
+                    <Image Height="18" Width="21"  Source="картинки\photo_2024-03-10_20-30-25.jpg"/>
+                    <Image Height="20" Width="19"  Source="картинки\photo_2024-03-10_20-30-34.jpg"/>
+                    <Image Height="16" Width="38" Source="картинки\5.jpg"/>
+                    <Image Height="20" Width="69" Source="картинки\4.jpg"/>
+                    <Image Height="17" Width="44" Source="картинки\photo_2024-03-10_20-30-55.jpg"/>
+                    <Image Height="14" Width="20"  Source="картинки\photo_2024-03-10_20-31-05.jpg"/>
+                    <Image Height="18" Width="16"  Source="картинки\photo_2024-03-10_20-31-14.jpg"/>
+                    <Image Height="18" Width="19" Source="картинки\photo_2024-03-10_20-31-24.jpg"/>
+                    <Image Height="18" Width="14"  Source="картинки\photo_2024-03-10_20-31-33.jpg"/>
+                    <Image Height="16" Width="16" Source="картинки\photo_2024-03-10_20-31-39.jpg"/>
+                    <Image Height="16" Width="14"  Source="картинки\photo_2024-03-10_20-31-46.jpg"/>
+                    <Image Height="18" Width="16"  Source="картинки\photo_2024-03-10_20-32-19.jpg"/>
+                    <Image Height="18" Width="25" Source="картинки\photo_2024-03-10_20-32-41.jpg"/>
+                    <Image Source="картинки\da68b797-6783-427d-a757-2c298095ece9.jpg"/>
+                    <Image Source="картинки\c3a893ba-c1ae-4d46-b9f0-1f8b971e9b71.jpg"/>
+                    <Image Source="картинки\a7d15a6b-4ed4-411c-922b-25005b7a1a2a.jpg"/>
+                    <Image Source="картинки\a1ecd867-7474-4397-b2d0-4b1515fc3a26.jpg"/>
+                    <Image Source="картинки\933fe5fd-e4cd-43b0-b3d4-a85105de7e8e.jpg"/>
+                    <Image Source="картинки\53f89344-54b5-49e4-a26c-eda2a2d6be28.jpg"/>
+                    <Image Source="картинки\e3021252-0ecd-4dc5-9908-ca474a38d1a4.jpg"/>
+
+                </Menu>
+            </StackPanel>
+        </Canvas>
+
+
+
+
+    </Grid>
+</Window>
